@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="w-full border-b">
+          {/* 메뉴 */}
+          <div className="max-w-screen-xl mx-auto flex justify-between h-20 w-full items-center">
+            {/* 로고 */}
+            <div>
+              <h1 className="text-3xl font-bold">LOGO</h1>
+            </div>
+            {/* 메뉴 */}
+            <div className="flex gap-x-4">
+              <div>과정안내</div>
+              <div>공지사항</div>
+              <div>토론방</div>
+            </div>
+            {/* 로그인 */}
+            <div className="flex gap-x-4">
+              <Button variant="outline" size="sm">
+                회원가입
+              </Button>
+              <Button>로그인</Button>
+            </div>
+          </div>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
