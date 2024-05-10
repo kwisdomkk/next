@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +29,14 @@ export default function RootLayout({ children }) {
             </div>
             {/* 로그인 */}
             <div className="flex gap-x-4">
-              <Button variant="outline" size="sm">
-                회원가입
-              </Button>
-              <Button>로그인</Button>
+              <Link href="/join">
+                <Button variant="outline" size="sm">
+                  회원가입
+                </Button>
+              </Link>
+              <Link href="/login">
+                <Button size="sm">로그인</Button>
+              </Link>
             </div>
           </div>
         </div>

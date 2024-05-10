@@ -644,11 +644,11 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-screen-xl {
-  max-width: 1280px;
-}
 .max-w-screen-sm {
   max-width: 640px;
+}
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 .grid-cols-\[2fr_1fr\] {
   grid-template-columns: 2fr 1fr;
@@ -687,11 +687,11 @@ video {
 .whitespace-nowrap {
   white-space: nowrap;
 }
-.rounded-md {
-  border-radius: calc(var(--radius) - 2px);
-}
 .rounded-lg {
   border-radius: var(--radius);
+}
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
 }
 .border {
   border-width: 1px;
@@ -705,6 +705,9 @@ video {
 .bg-background {
   background-color: hsl(var(--background));
 }
+.bg-card {
+  background-color: hsl(var(--card));
+}
 .bg-destructive {
   background-color: hsl(var(--destructive));
 }
@@ -716,9 +719,6 @@ video {
 }
 .bg-secondary {
   background-color: hsl(var(--secondary));
-}
-.bg-card {
-  background-color: hsl(var(--card));
 }
 .p-6 {
   padding: 1.5rem;
@@ -742,6 +742,10 @@ video {
 .pt-0 {
   padding-top: 0px;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -749,10 +753,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .font-bold {
   font-weight: 700;
@@ -769,8 +769,14 @@ video {
 .tracking-tight {
   letter-spacing: -0.025em;
 }
+.text-card-foreground {
+  color: hsl(var(--card-foreground));
+}
 .text-destructive-foreground {
   color: hsl(var(--destructive-foreground));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
 }
 .text-primary {
   color: hsl(var(--primary));
@@ -778,14 +784,12 @@ video {
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
 }
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
-}
-.text-card-foreground {
-  color: hsl(var(--card-foreground));
-}
-.text-muted-foreground {
-  color: hsl(var(--muted-foreground));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -903,5 +907,13 @@ video {
 
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
+}
+
+.peer:disabled ~ .peer-disabled\:cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.peer:disabled ~ .peer-disabled\:opacity-70 {
+  opacity: 0.7;
 }
 

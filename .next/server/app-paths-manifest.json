@@ -1,5 +1,6 @@
 {
-  "/login/page": "app/login/page.js",
   "/join/page": "app/join/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/settings/page": "app/settings/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/login/page": "app/login/page.js"
 }
